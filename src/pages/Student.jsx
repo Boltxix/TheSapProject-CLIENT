@@ -23,6 +23,7 @@ const Student = () => {
 
     const updatedUser = {
       id: currentUser.id,
+      role: currentUser.role,
       username: newUsername,
       email: newEmail,
       subject: currentUser.subject,
