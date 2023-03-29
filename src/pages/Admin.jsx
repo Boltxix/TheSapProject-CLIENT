@@ -10,7 +10,7 @@ const Admin = () => {
 
 
   useEffect(() => {
-    axios.get('hhttps://sap-project-api.herokuapp.com/api/admin/students ')
+    axios.get('https://sap-project-api.herokuapp.com/api/admin/students ')
       .then(response => {
         setUsers(response.data);
       })
