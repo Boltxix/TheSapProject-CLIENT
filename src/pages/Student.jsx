@@ -31,8 +31,8 @@ const Student = () => {
     axios.put(`https://sap-project-api.herokuapp.com/api/student/student/${currentUser.id}`, updatedUser)
       .then(response => {
         console.log(response);
-
         localStorage.setItem('user', JSON.stringify(updatedUser));
+        window.location.reload();
       })
       .catch(error => {
         console.error(error);
