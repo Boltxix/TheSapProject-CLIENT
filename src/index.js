@@ -3,8 +3,9 @@ import ReactDOM from 'react-dom/client';
 import App from './App';
 import "typeface-roboto";
 import { AuthContextProvider} from './context/authContext';
+
 const securityHeaders = {
-  'Content-Security-Policy': "default-src 'self' https://sap-project-api.herokuapp.com; script-src 'self'; style-src 'self'; img-src 'self' data:; connect-src 'self' https://sap-project-api.herokuapp.com; font-src 'self'; object-src 'none'; media-src 'self'",
+  'Content-Security-Policy': "default-src 'self' https://sap-project-api.herokuapp.com; script-src 'self' 'unsafe-inline'; style-src 'self'; img-src 'self' data:; connect-src 'self' https://sap-project-api.herokuapp.com; font-src 'self'; object-src 'none'; media-src 'self'",
   'X-Frame-Options': 'SAMEORIGIN',
   'X-Content-Type-Options': 'nosniff',
   'Referrer-Policy': 'strict-origin-when-cross-origin',
