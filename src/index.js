@@ -21,8 +21,12 @@ const headers = {
   'Permissions-Policy': 'camera=(), microphone=(), geolocation=()'
 };
 
-Object.entries(headers).forEach(([header, value]) => {
-  document.header(header, value);
+Object.entries(securityHeaders).forEach(([header, value]) => {
+  const headerElement = document.querySelector('header');
+  const metaElement = document.createElement('meta');
+  metaElement.setAttribute('http-equiv', header);
+  metaElement.setAttribute('content', value);
+  headerElement.appendChild(metaElement);
 });
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
