@@ -33,7 +33,8 @@ const Student = () => {
       .then(response => {
         console.log(response);
         localStorage.setItem('user', JSON.stringify(updatedUser));
-        window.location.reload();
+        alert('Profile updated successfully!');
+        window.location.href = '/';
       })
       .catch(error => {
         console.error(error);
