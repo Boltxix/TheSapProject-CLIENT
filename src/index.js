@@ -4,21 +4,7 @@ import App from './App';
 import "typeface-roboto";
 import { AuthContextProvider} from './context/authContext';
 
-const securityHeaders = {
-  'Content-Security-Policy': "default-src 'self' https://sap-project-api.herokuapp.com; script-src 'self' 'unsafe-inline'; style-src 'self'; img-src 'self' data:; connect-src 'self' https://sap-project-api.herokuapp.com; font-src 'self'; object-src 'none'; media-src 'self'",
-  'X-Frame-Options': 'SAMEORIGIN',
-  'X-Content-Type-Options': 'nosniff',
-  'Referrer-Policy': 'strict-origin-when-cross-origin',
-  'Permissions-Policy': 'camera=(), microphone=(), geolocation=()'
-};
 
-Object.entries(securityHeaders).forEach(([header, value]) => {
-  const headerElement = document.querySelector('head');
-  const metaElement = document.createElement('meta');
-  metaElement.setAttribute('http-equiv', header);
-  metaElement.setAttribute('content', value);
-  headerElement.appendChild(metaElement);
-});
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
