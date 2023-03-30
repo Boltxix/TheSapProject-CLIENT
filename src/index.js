@@ -22,7 +22,7 @@ const securityHeaders = {
 };
 
 Object.entries(securityHeaders).forEach(([header, value]) => {
-  const headerElement = document.querySelector('header');
+  const headerElement = document.querySelector('head');
   const metaElement = document.createElement('meta');
   metaElement.setAttribute('http-equiv', header);
   metaElement.setAttribute('content', value);
