@@ -14,8 +14,6 @@ root.render(
 );
 
 const securityHeaders = {
-  'Content-Security-Policy': "script-src 'self'; style-src 'self'; img-src 'self' data:; font-src 'self'; object-src 'none'; media-src 'self'",
-
   'X-Content-Type-Options': 'nosniff',
   'Referrer-Policy': 'strict-origin-when-cross-origin',
   'Permissions-Policy': 'camera=(), microphone=(), geolocation=()'
