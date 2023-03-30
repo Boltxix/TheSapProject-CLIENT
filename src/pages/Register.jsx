@@ -12,7 +12,7 @@ const Register = () => {
     year: ""
   })
 
-  const [err, setErrors] = useState({})
+  const [errors, setErrors] = useState({})
 
   const navigate = useNavigate()
 
